@@ -46,12 +46,12 @@ impl Component for Model {
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
-            <BrowserRouter>
+            <HashRouter>
                 { self.view_nav(ctx.link()) }
                 <main style="margin-top: 81px; width: 100vw">
                     <Switch<Route> render={Switch::render(switch)} />
                 </main>
-            </BrowserRouter>
+            </HashRouter>
         }
     }
 }
